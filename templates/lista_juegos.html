@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../static/style.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1>JUEGOS MSX</h1>
+    <div id="nav">
+    </div>
+  </div>
+  <div id="content">
+      {% for elem in juego -%}
+      <table border="5">
+          <td><h1>Juego: {{elem.get("nombre")}}</h1></td>
+          <td><h1>Desarrollador: {{elem.get("desarrollador")}}</h1></td>
+          <td><h1><a href="juego/{{elem.get("id")}}">Detalles</a></h1></td>
+      </table>
+      {% endfor %}
+  </div>
+  <div id="footer"> Puedes acceder a los detalles del juego clickando en detalles. <a href="formulario"></a></div>
+</div>
+</body>
+</html>

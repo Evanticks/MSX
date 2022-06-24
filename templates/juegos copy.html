@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<title>{% block title %}Lista de juegos.{% endblock %}</title>
+    {% block content %}
+    <form action="/lista_juegos" method="post">
+        <textarea type="text" name="texto" placeholder="Nombre del juego"></textarea>
+        <input type="submit" value="Enviar mensaje">
+      </form>
+    {% endblock %}
+  </div>
+  {% block contenido %}
+  <div id="footer"> En el siguiente buscador puedes encontrar el juego. <a href="formulario"></a></div>
+  {% endblock %}
+</div>
+</body>
+</html>

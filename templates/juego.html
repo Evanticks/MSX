@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<title>{% block title %}Datos de juego.{% endblock %}</title>
+    {% block content %}
+    <h1>
+       <ol>
+            <li>Juego: {{dato.get("nombre")}}</li>
+            <li>{{dato.get("sistema")}}</li>
+            <li>{{dato.get("distribuidor")}}</li>
+            <li>{{dato.get("desarrollador")}}</li>
+            <li>{{dato.get("categoria")}}</li>
+            <li>{{dato.get("año")}}</li>
+       </ol>
+    </h1>
+    {% endblock %}
+  </div>
+  {% block contenido %}
+  <div id="footer"><a href="/juegos">Pulsa aquí para volver. </a></div>
+  {% endblock %}
+</div>
+</body>
+</html>
